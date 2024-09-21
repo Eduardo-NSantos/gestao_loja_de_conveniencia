@@ -8,6 +8,7 @@ void informacoes_da_equipe(void);
 
 int main(void){
     menu_principal();
+    informacoes_gerais();
 
     printf("fim");
 
@@ -20,6 +21,7 @@ void menu_principal(void){
     system("clear||cls");
     printf("\n");
     printf("____________________________________________________________________\n");    
+    printf("||                                                                ||\n");    
     printf("| = = = = = Sistema de Gestão para uma loja de conveniencia  = = = |\n");    
     printf("||                                                                ||\n");    
     printf("||  1 - Modulo de produtos                                        ||\n");    
@@ -34,6 +36,31 @@ void menu_principal(void){
     getchar();
     printf("||                                                                ||\n");    
     printf("|==================================================================|\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void informacoes_gerais(void){
+    system("clear||cls");
+    printf("\n");
+    printf("____________________________________________________________________\n");    
+    printf("||                                                                ||\n");    
+    printf("|| = = = = = = = = = Menu de informacões gerais = = = = = = = = = ||\n");    
+    printf("||                                                                ||\n");    
+    printf("||           Universidade Federal do Rio Grande do Norte          ||\n");    
+    printf("||              Centro de Ensino Superior do Seridó               ||\n");    
+    printf("||            Departamento de Computação e Tecnologia             ||\n");    
+    printf("||               Disciplina DCT1106 -- Programação                ||\n");    
+    printf("||         Sistema de gestão para uma loja de conveniencia        ||\n");    
+    printf("||                                                                ||\n");    
+    printf("|| = || = || = || = || = || = || || || = || = || = || = || = || = ||\n");   
+    printf("||                                                                ||\n");    
+    printf("||  Esse projeto trata do desenvolvimento de um sistema de gestão ||\n");    
+    printf("||  para uma loja de conveniência, com o intuito de ser avaliado  ||\n");    
+    printf("||  na disciplina DCT1106 - Programação.                          ||\n");    
+    printf("||                                                                ||\n");    
+    printf("|==================================================================|\n");    
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();

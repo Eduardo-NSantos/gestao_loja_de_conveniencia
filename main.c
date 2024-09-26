@@ -4,13 +4,14 @@
 void menu_principal(void);
 void informacoes_gerais(void);
 void informacoes_da_equipe(void);
+void tela_modulo_produtos(void);
 
 
 int main(void){
     menu_principal();
     informacoes_gerais();
     informacoes_da_equipe();
-
+    tela_modulo_produtos();
     printf("fim");
 
     return 0;
@@ -88,3 +89,23 @@ void informacoes_da_equipe(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+void tela_modulo_produtos(void){
+    system("clear||cls");
+    printf("/n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Módulo Produtos         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      1 - Cadastrar Produto                                     ||\n");
+    printf("||      2 - Verificar Produto                                     ||\n");
+    printf("||      3 - Alterar Produto                                       ||\n");
+    printf("||      4 - Excluir Produto                                       ||\n");
+    printf("||      0 - Sair                                                  ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+        

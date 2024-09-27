@@ -5,6 +5,8 @@ void menu_principal(void);
 void informacoes_gerais(void);
 void informacoes_da_equipe(void);
 void tela_modulo_produtos(void);
+void tela_cadastrar_produto(void);
+void tela_verificar_produto(void);
 
 
 int main(void){
@@ -12,6 +14,8 @@ int main(void){
     informacoes_gerais();
     informacoes_da_equipe();
     tela_modulo_produtos();
+    tela_cadastrar_produto();
+    tela_verificar_produto();
     printf("fim");
 
     return 0;
@@ -57,11 +61,13 @@ void informacoes_gerais(void){
     printf("||               Disciplina DCT1106 -- Programação                ||\n");    
     printf("||         Sistema de gestão para uma loja de conveniencia        ||\n");    
     printf("||                                                                ||\n");    
-    printf("|| = || = || = || = || = || = || || || = || = || = || = || = || = ||\n");   
+    printf("||================================================================||\n");   
+    printf("||                                                                ||\n");    
     printf("||                                                                ||\n");    
     printf("||  Esse projeto trata do desenvolvimento de um sistema de gestão ||\n");    
     printf("||  para uma loja de conveniência, com o intuito de ser avaliado  ||\n");    
     printf("||  na disciplina DCT1106 - Programação.                          ||\n");    
+    printf("||                                                                ||\n");    
     printf("||                                                                ||\n");    
     printf("|==================================================================|\n");    
     printf("\n");
@@ -92,7 +98,7 @@ void informacoes_da_equipe(void){
 
 void tela_modulo_produtos(void){
     system("clear||cls");
-    printf("/n");
+    printf("\n");
     printf("|| ______________________________________________________________ ||\n");
     printf("||                                                                ||\n");
     printf("|| = = = = = = = =          Módulo Produtos         = = = = = = = ||\n");
@@ -108,4 +114,51 @@ void tela_modulo_produtos(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }
-        
+
+void tela_cadastrar_produto(void){
+    char nome[20], codigo[10], marca[15];
+    float preco;
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        cadastrar produto         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Nome do produto: ");
+    scanf("%s", nome);
+    printf("||      => Codigo do produto: ");
+    scanf("%s", codigo);
+    printf("||      => Marca do produto: ");
+    scanf("%s", marca);
+    printf("||      => Preço do produto: ");
+    scanf("%f", &preco);
+    printf("||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}  
+
+void tela_verificar_produto(void){
+    char codigo[10];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        verificar produto         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Codigo do produto: ");
+    scanf("%s", codigo);
+    printf("||\n");
+    printf("||      => Nome do produto: XXXXXXXX\n");
+    printf("||      => Codigo do produto: XXXXXXXX\n");
+    printf("||      => Marca do produto: XXXXXXXX\n");
+    printf("||      => Preço do produto: XXXXXXXX\n");
+    printf("||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}

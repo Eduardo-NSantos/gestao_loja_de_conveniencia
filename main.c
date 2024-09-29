@@ -7,6 +7,7 @@ void informacoes_da_equipe(void);
 void tela_modulo_produtos(void);
 void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
+void tela_alterar_produto(void);
 
 
 int main(void){
@@ -16,6 +17,7 @@ int main(void){
     tela_modulo_produtos();
     tela_cadastrar_produto();
     tela_verificar_produto();
+    tela_alterar_produto();
     printf("fim");
 
     return 0;
@@ -161,4 +163,32 @@ void tela_verificar_produto(void){
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+
+
+    void tela_alterar_produto(void){
+    char nome[20], codigo[10], marca[15];
+    float preco;
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Alterar Produto         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Codigo do produto:                                     ||\n");
+    scanf("%s", codigo);
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||\n");
+    printf("||      => Nome do produto:                                       ||\n");
+    scanf("%s", nome);
+    printf("||      => Marca do produto:                                      ||\n");
+    scanf("%s", marca);
+    printf("||      => Preço do produto:                                      ||\n");
+    scanf("%f", &preco);
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+
 }

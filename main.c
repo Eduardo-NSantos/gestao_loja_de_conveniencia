@@ -163,9 +163,9 @@ void tela_verificar_produto(void){
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+}
 
-
-    void tela_alterar_produto(void){
+void tela_alterar_produto(void){
     char nome[20], codigo[10], marca[15];
     float preco;
 

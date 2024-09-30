@@ -204,7 +204,7 @@ void tela_excluir_produto(void){
     printf("|| = = = = = = = =          Excluir Produto         = = = = = = = ||\n");
     printf("||                                                                ||\n");
     printf("||      => Codigo do produto:                                     ||\n");
-    scanf("%s", codigo);
+    printf("||                                                                ||\n");
     printf("||      => Produto excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");
 }

@@ -8,6 +8,7 @@ void tela_modulo_produtos(void);
 void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
+void tela_excluir_produto(void);
 
 
 int main(void){
@@ -18,6 +19,7 @@ int main(void){
     tela_cadastrar_produto();
     tela_verificar_produto();
     tela_alterar_produto();
+    tela_excluir_produto();
     printf("fim");
 
     return 0;
@@ -185,6 +187,36 @@ void tela_alterar_produto(void){
     scanf("%s", marca);
     printf("||      => Preço do produto:                                      ||\n");
     scanf("%f", &preco);
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+
+}
+
+void tela_excluir_produto(void){
+    char codigo[10];
+    char op;
+    
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          excluir Produto         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Codigo do produto: ");
+    scanf("%s", codigo);
+    getchar();
+    printf("||\n");
+    printf("||      => Nome do produto: XXXXXXXX\n");
+    printf("||      => Codigo do produto: XXXXXXXX\n");
+    printf("||      => Marca do produto: XXXXXXXX\n");
+    printf("||      => Preço do produto: XXXXXXXX\n");
+    printf("||\n");
+    printf("||      => Confirmar exclusão do produto [S/N]: ");
+    scanf("%c", &op);
+    getchar();
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");

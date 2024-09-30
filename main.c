@@ -8,6 +8,7 @@ void tela_modulo_produtos(void);
 void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
+void tela_excluir_produto(void);
 
 
 int main(void){
@@ -18,6 +19,7 @@ int main(void){
     tela_cadastrar_produto();
     tela_verificar_produto();
     tela_alterar_produto();
+    tela_excluir_produto();
     printf("fim");
 
     return 0;
@@ -191,4 +193,18 @@ void tela_alterar_produto(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 
+}
+
+void tela_excluir_produto(void){
+    char codigo;
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Excluir Produto         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Codigo do produto:                                     ||\n");
+    scanf("%s", codigo);
+    printf("||      => Produto excluído!                                      ||\n");
+    printf("|| ______________________________________________________________ ||\n");
 }

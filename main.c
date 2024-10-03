@@ -120,8 +120,8 @@ void tela_modulo_produtos(void){
 }
 
 void tela_cadastrar_produto(void){
-    char nome[20], codigo[10], marca[15];
-    float preco;
+    char nome[20], codigo[10], marca[15], preco[8];
+    
 
     system("clear||cls");
     printf("\n");
@@ -131,12 +131,16 @@ void tela_cadastrar_produto(void){
     printf("||                                                                ||\n");
     printf("||      => Nome do produto: ");
     scanf("%s", nome);
+    fgets(nome, 20, stdin);
     printf("||      => Codigo do produto: ");
     scanf("%s", codigo);
+    gets(codigo, 10, stdin);
     printf("||      => Marca do produto: ");
     scanf("%s", marca);
+    fgets(marca, 15, stdin);
     printf("||      => Preço do produto: ");
     scanf("%f", &preco);
+    fgets(preco, 8, stdin);
     printf("||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
@@ -155,6 +159,7 @@ void tela_verificar_produto(void){
     printf("||                                                                ||\n");
     printf("||      => Codigo do produto: ");
     scanf("%s", codigo);
+    fgets(codigo, 8, stdin);
     printf("||\n");
     printf("||      => Nome do produto: XXXXXXXX\n");
     printf("||      => Codigo do produto: XXXXXXXX\n");
@@ -168,8 +173,8 @@ void tela_verificar_produto(void){
 }
 
 void tela_alterar_produto(void){
-    char nome[20], codigo[10], marca[15];
-    float preco;
+    char nome[20], codigo[10], marca[15], preco[8];
+    
 
     system("clear||cls");
     printf("\n");
@@ -177,16 +182,21 @@ void tela_alterar_produto(void){
     printf("||                                                                ||\n");
     printf("|| = = = = = = = =          Alterar Produto         = = = = = = = ||\n");
     printf("||                                                                ||\n");
-    printf("||      => Codigo do produto:                                     ||\n");
+    printf("||      => Codigo do produto: ");
     scanf("%s", codigo);
-    printf("|| ______________________________________________________________ ||\n");
+    fgets(codigo, 8, stdin);
+    printf("\n");
+    printf("|| ______________________________________________________________ \n");
     printf("||\n");
-    printf("||      => Nome do produto:                                       ||\n");
+    printf("||      => Nome do produto: ");
     scanf("%s", nome);
-    printf("||      => Marca do produto:                                      ||\n");
+    fgets(nome, 20, stdin);
+    printf("||      => Marca do produto: ");
     scanf("%s", marca);
-    printf("||      => Preço do produto:                                      ||\n");
-    scanf("%f", &preco);
+    fgets(marca, 15, stdin);
+    printf("||      => Preço do produto: ");
+    scanf("%s", &preco);
+    fgets(preco, 8, stdin);
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
@@ -196,14 +206,16 @@ void tela_alterar_produto(void){
 }
 
 void tela_excluir_produto(void){
-    char codigo;
+    char codigo[10];
     system("clear||cls");
     printf("\n");
     printf("|| ______________________________________________________________ ||\n");
     printf("||                                                                ||\n");
     printf("|| = = = = = = = =          Excluir Produto         = = = = = = = ||\n");
     printf("||                                                                ||\n");
-    printf("||      => Codigo do produto:                                     ||\n");
+    printf("||      => Codigo do produto: ");
+    scanf("%s", codigo);
+    fgets(codigo, 10, stdin);
     printf("||                                                                ||\n");
     printf("||      => Produto excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");

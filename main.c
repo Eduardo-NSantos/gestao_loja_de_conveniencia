@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void menu_principal(void);
+int menu_principal(void);
 void informacoes_gerais(void);
 void informacoes_da_equipe(void);
 void tela_modulo_produtos(void);
@@ -16,29 +16,54 @@ void tela_verificar_cliente(void);
 void tela_alterar_cliente(void);
 void tela_excluir_cliente(void);
 
+/*
+void tela_modulo_vendas(void);
+void cadastrar_venda(void);
+void alterar_venda(void);
+*/
 
 int main(void){
-    menu_principal();
-    informacoes_gerais();
-    informacoes_da_equipe();
-    tela_modulo_produtos();
-    tela_cadastrar_produto();
-    tela_verificar_produto();
-    tela_alterar_produto();
-    tela_excluir_produto();
+    char op = menu_principal();
 
-    tela_modulo_clientes();
-    tela_cadastrar_cliente();
-    tela_verificar_cliente();
-    tela_alterar_cliente();
-    tela_excluir_cliente();
-    printf("fim");
+    if(op == '1'){
+        tela_modulo_produtos();
+        tela_cadastrar_produto();
+        tela_verificar_produto();
+        tela_alterar_produto();
+        tela_excluir_produto();
+    }else if(op == '2'){
+        tela_modulo_clientes();
+        tela_cadastrar_cliente();
+        tela_verificar_cliente();
+        tela_alterar_cliente();
+        tela_excluir_cliente();
+    }else if(op == '3'){
+        system("clear||cls");
+        printf("\n");
+        printf("Menu em construção\n");
+        printf("| Tecle <ENTER> para continuar...\n");
+        getchar();
+    }else if(op == '4'){
+        system("clear||cls");
+        printf("\n");
+        printf("Menu em construção\n");
+        printf("| Tecle <ENTER> para continuar...\n");
+        getchar();
+    }else if(op == '5'){
+        informacoes_gerais();
+    }else if(op == '6'){
+        informacoes_da_equipe();
+    }else if(op == '0'){
+        printf("fim\n");
+    }else{
+        printf("Opção inválida!");
+    }
 
     return 0;
 }
 
 
-void menu_principal(void){
+int menu_principal(void){
     char op;
     system("clear||cls");
     printf("\n");
@@ -62,6 +87,7 @@ void menu_principal(void){
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void informacoes_gerais(void){
@@ -146,12 +172,12 @@ void tela_cadastrar_produto(void){
     fgets(nome, 20, stdin);
     printf("||      => Codigo do produto: ");
     scanf("%s", codigo);
-    gets(codigo, 10, stdin);
+    fgets(codigo, 10, stdin);
     printf("||      => Marca do produto: ");
     scanf("%s", marca);
     fgets(marca, 15, stdin);
     printf("||      => Preço do produto: ");
-    scanf("%f", &preco);
+    scanf("%s", preco);
     fgets(preco, 8, stdin);
     printf("||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
@@ -207,7 +233,7 @@ void tela_alterar_produto(void){
     scanf("%s", marca);
     fgets(marca, 15, stdin);
     printf("||      => Preço do produto: ");
-    scanf("%s", &preco);
+    scanf("%s", preco);
     fgets(preco, 8, stdin);
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
@@ -231,6 +257,9 @@ void tela_excluir_produto(void){
     printf("||                                                                ||\n");
     printf("||      => Produto excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
 }
 
 void tela_modulo_clientes(void){
@@ -266,7 +295,7 @@ void tela_cadastrar_cliente(void){
     fgets(cpf, 12, stdin);
     printf("||      => Nome do Cliente: ");
     scanf("%s", nomec);
-    gets(nomec, 52, stdin);
+    fgets(nomec, 52, stdin);
     printf("||      => Celular do cliente: ");
     scanf("%s", celular);
     fgets(celular, 15, stdin);
@@ -350,4 +379,7 @@ void tela_excluir_cliente(void){
     printf("||                                                                ||\n");
     printf("||      => Cliente excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
 }

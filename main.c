@@ -329,3 +329,19 @@ void tela_alterar_cliente(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+void tela_excluir_cliente(void){
+    char cpf[12];
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Excluir Cliente         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => CPF do cliente: ");
+    scanf("%s", cpf);
+    fgets(cpf, 12, stdin);
+    printf("||                                                                ||\n");
+    printf("||      => Cliente excluído!                                      ||\n");
+    printf("|| ______________________________________________________________ ||\n");
+}

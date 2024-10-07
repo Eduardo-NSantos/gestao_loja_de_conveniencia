@@ -9,6 +9,7 @@ void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
 void tela_excluir_produto(void);
+
 void tela_modulo_clientes(void);
 void tela_cadastrar_cliente(void);
 void tela_verificar_cliente(void);
@@ -239,6 +240,34 @@ void tela_modulo_clientes(void){
     printf("||      4 - Excluir Cliente                                       ||\n");
     printf("||      0 - Sair                                                  ||\n");
     printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_cadastrar_cliente(void){
+    char cpf[12], nomec[52], celular[15], email[52];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        Cadastrar Cliente         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => CPF do cliente: ");
+    scanf("%s", cpf);
+    fgets(cpf, 12, stdin);
+    printf("||      => Nome do Cliente: ");
+    scanf("%s", nomec);
+    gets(nomec, 52, stdin);
+    printf("||      => Celular do cliente: ");
+    scanf("%s", celular);
+    fgets(celular, 15, stdin);
+    printf("||      => E-mail do cliente: ");
+    scanf("%s", email);
+    fgets(email, 52, stdin);
+    printf("||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");

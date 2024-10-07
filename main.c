@@ -26,6 +26,12 @@ int main(void){
     tela_verificar_produto();
     tela_alterar_produto();
     tela_excluir_produto();
+
+    tela_modulo_clientes();
+    tela_cadastrar_cliente();
+    tela_verificar_cliente();
+    tela_alterar_cliente();
+    tela_excluir_cliente();
     printf("fim");
 
     return 0;

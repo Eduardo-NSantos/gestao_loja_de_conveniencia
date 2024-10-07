@@ -9,6 +9,11 @@ void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
 void tela_excluir_produto(void);
+void tela_modulo_clientes(void);
+void tela_cadastrar_cliente(void);
+void tela_verificar_cliente(void);
+void tela_alterar_cliente(void);
+void tela_excluir_cliente(void);
 
 
 int main(void){
@@ -219,4 +224,23 @@ void tela_excluir_produto(void){
     printf("||                                                                ||\n");
     printf("||      => Produto excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");
+}
+
+void tela_modulo_clientes(void){
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Módulo Clientes         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      1 - Cadastrar Cliente                                     ||\n");
+    printf("||      2 - Verificar Cliente                                     ||\n");
+    printf("||      3 - Alterar Cliente                                       ||\n");
+    printf("||      4 - Excluir Cliente                                       ||\n");
+    printf("||      0 - Sair                                                  ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
 }

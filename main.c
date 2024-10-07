@@ -297,3 +297,35 @@ void tela_verificar_cliente(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+void tela_alterar_cliente(void){
+    
+    char cpf[12], nomec[52], celular[15], email[52];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =          Alterar Cliente         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => CPF dop cliente: ");
+    scanf("%s", cpf);
+    fgets(cpf, 12, stdin);
+    printf("\n");
+    printf("|| ______________________________________________________________ \n");
+    printf("||\n");
+    printf("||      => Nome do cliente: ");
+    scanf("%s", nomec);
+    fgets(nomec, 52, stdin);
+    printf("||      => Celular do cliente: ");
+    scanf("%s", celular);
+    fgets(celular, 15, stdin);
+    printf("||      => E-mail do cliente: ");
+    scanf("%s", email);
+    fgets(email, 52, stdin);
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}

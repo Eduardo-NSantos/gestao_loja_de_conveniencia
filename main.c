@@ -19,6 +19,7 @@ void tela_excluir_cliente(void);
 void tela_modulo_vendas(void);
 void tela_cadastrar_venda(void);
 void tela_alterar_venda(void);
+void tela_excluir_venda(void);
 
 int main(void){
     char op = menu_principal();
@@ -39,6 +40,7 @@ int main(void){
         tela_modulo_vendas();
         tela_cadastrar_venda();
         tela_alterar_venda();
+        tela_excluir_venda();
     }else if(op == '4'){
         system("clear||cls");
         printf("\n");
@@ -460,6 +462,26 @@ void tela_alterar_venda(void){
     scanf("%s", valor_total);
     fgets(valor_total, 9, stdin);
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_excluir_venda(void){
+    char codigo[11];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =           Excluir venda          = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Código da venda: ");
+    scanf("%s", codigo);
+    fgets(codigo, 11, stdin);
+    printf("||                                                                ||\n");
+    printf("||      => Venda excluída!                                        ||\n");
+    printf("|| ______________________________________________________________ ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();

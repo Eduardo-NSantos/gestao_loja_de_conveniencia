@@ -38,6 +38,7 @@ int main(void){
     }else if(op == '3'){
         tela_modulo_vendas();
         tela_cadastrar_venda();
+        tela_alterar_venda();
     }else if(op == '4'){
         system("clear||cls");
         printf("\n");
@@ -404,7 +405,7 @@ void tela_modulo_vendas(void){
 }
 
 void tela_cadastrar_venda(void){
-    char cpf[12], produtos_vendidos[6], opcao_entrega[15], valor_total[9];
+    char cpf[12], produtos_vendidos[6], opcao_entrega[15], valor_total[9], codigo[11];
 
     system("clear||cls");
     printf("\n");
@@ -424,7 +425,40 @@ void tela_cadastrar_venda(void){
     printf("||      => Valor total: ");
     scanf("%s", valor_total);
     fgets(valor_total, 9, stdin);
+    printf("||      => Código da venda: ");
+    scanf("%s", codigo);
+    fgets(codigo, 11, stdin);
     printf("||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_alterar_venda(void){
+    char cpf[12], produtos_vendidos[6], opcao_entrega[15], valor_total[9], codigo[11];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =         Alterar venda            = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => Código da venda: ");
+    scanf("%s", codigo);
+    fgets(codigo, 11, stdin);
+    printf("||      => (Novo) CPF do cliente: ");
+    scanf("%s", cpf);
+    fgets(cpf, 12, stdin);
+    printf("||      => (Novo) Produtos vendidos: ");
+    scanf("%s", produtos_vendidos);
+    fgets(produtos_vendidos, 6, stdin);
+    printf("||      => (Novo) Opção de entrega: ");
+    scanf("%s", opcao_entrega);
+    fgets(opcao_entrega, 15, stdin);
+    printf("||      => (Novo) Valor total: ");
+    scanf("%s", valor_total);
+    fgets(valor_total, 9, stdin);
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");

@@ -16,11 +16,9 @@ void tela_verificar_cliente(void);
 void tela_alterar_cliente(void);
 void tela_excluir_cliente(void);
 
-/*
 void tela_modulo_vendas(void);
-void cadastrar_venda(void);
-void alterar_venda(void);
-*/
+void tela_cadastrar_venda(void);
+void tela_alterar_venda(void);
 
 int main(void){
     char op = menu_principal();
@@ -38,11 +36,8 @@ int main(void){
         tela_alterar_cliente();
         tela_excluir_cliente();
     }else if(op == '3'){
-        system("clear||cls");
-        printf("\n");
-        printf("Menu em construção\n");
-        printf("| Tecle <ENTER> para continuar...\n");
-        getchar();
+        tela_modulo_vendas();
+        tela_cadastrar_venda();
     }else if(op == '4'){
         system("clear||cls");
         printf("\n");
@@ -379,6 +374,58 @@ void tela_excluir_cliente(void){
     printf("||                                                                ||\n");
     printf("||      => Cliente excluído!                                      ||\n");
     printf("|| ______________________________________________________________ ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_modulo_vendas(void){
+    char op;
+    system("clear||cls");
+    printf("\n");
+    printf("____________________________________________________________________\n");    
+    printf("||                                                                ||\n");    
+    printf("| = = = = = Sistema de Gestão para uma loja de conveniencia  = = = |\n");    
+    printf("||                                                                ||\n");    
+    printf("||    1 - Cadastrar venda                                         ||\n");    
+    printf("||    2 - alterar venda                                           ||\n");    
+    printf("||    3 - Excluir venda                                           ||\n");    
+    printf("||    4 - Exibir venda                                            ||\n");    
+    printf("||    0 - sair                                                    ||\n");    
+    printf("||                                                                ||\n");    
+    printf("||    => Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("||                                                                ||\n");    
+    printf("|==================================================================|\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_cadastrar_venda(void){
+    char cpf[12], produtos_vendidos[6], opcao_entrega[15], valor_total[9];
+
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        Cadastrar venda           = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      => CPF do cliente: ");
+    scanf("%s", cpf);
+    fgets(cpf, 12, stdin);
+    printf("||      => Produtos vendidos: ");
+    scanf("%s", produtos_vendidos);
+    fgets(produtos_vendidos, 6, stdin);
+    printf("||      => Opção de entrega: ");
+    scanf("%s", opcao_entrega);
+    fgets(opcao_entrega, 15, stdin);
+    printf("||      => Valor total: ");
+    scanf("%s", valor_total);
+    fgets(valor_total, 9, stdin);
+    printf("||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();

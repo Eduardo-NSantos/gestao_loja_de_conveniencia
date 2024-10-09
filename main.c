@@ -24,41 +24,45 @@ void tela_excluir_venda(void);
 void tela_exibir_venda(void);
 
 int main(void){
-    char op = menu_principal();
+    char op;
 
-    if(op == '1'){
-        tela_modulo_produtos();
-        tela_cadastrar_produto();
-        tela_verificar_produto();
-        tela_alterar_produto();
-        tela_excluir_produto();
-    }else if(op == '2'){
-        tela_modulo_clientes();
-        tela_cadastrar_cliente();
-        tela_verificar_cliente();
-        tela_alterar_cliente();
-        tela_excluir_cliente();
-    }else if(op == '3'){
-        tela_modulo_vendas();
-        tela_cadastrar_venda();
-        tela_alterar_venda();
-        tela_excluir_venda();
-        tela_exibir_venda();
-    }else if(op == '4'){
-        system("clear||cls");
-        printf("\n");
-        printf("Menu em construção\n");
-        printf("| Tecle <ENTER> para continuar...\n");
-        getchar();
-    }else if(op == '5'){
-        informacoes_gerais();
-    }else if(op == '6'){
-        informacoes_da_equipe();
-    }else if(op == '0'){
-        printf("fim\n");
-    }else{
-        printf("Opção inválida!");
-    }
+    do{
+        op = menu_principal();
+
+        if(op == '1'){
+            tela_modulo_produtos();
+            tela_cadastrar_produto();
+            tela_verificar_produto();
+            tela_alterar_produto();
+            tela_excluir_produto();
+        }else if(op == '2'){
+            tela_modulo_clientes();
+            tela_cadastrar_cliente();
+            tela_verificar_cliente();
+            tela_alterar_cliente();
+            tela_excluir_cliente();
+        }else if(op == '3'){
+            tela_modulo_vendas();
+            tela_cadastrar_venda();
+            tela_alterar_venda();
+            tela_excluir_venda();
+            tela_exibir_venda();
+        }else if(op == '4'){
+            system("clear||cls");
+            printf("\n");
+            printf("Menu em construção\n");
+            printf("| Tecle <ENTER> para continuar...\n");
+            getchar();
+        }else if(op == '5'){
+            informacoes_gerais();
+        }else if(op == '6'){
+            informacoes_da_equipe();
+        }else if(op == '0'){
+            printf("fim\n");
+        }else{
+            printf("Opção inválida!");
+        }
+    }while(op != '0');
 
     return 0;
 }

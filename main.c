@@ -23,6 +23,13 @@ void tela_alterar_venda(void);
 void tela_excluir_venda(void);
 void tela_exibir_venda(void);
 
+void tela_entregas(void);
+void tela_entregas_pendentes(void);
+void tela_comfirmar_entregas(void);
+void tela_cancelar_entrega(void);
+
+
+
 int main(void){
     char op;
 
@@ -48,14 +55,16 @@ int main(void){
             tela_excluir_venda();
             tela_exibir_venda();
         }else if(op == '4'){
+            tela_entregas();
+        }else if(op == '5'){
             system("clear||cls");
             printf("\n");
             printf("Menu em construção\n");
             printf("| Tecle <ENTER> para continuar...\n");
             getchar();
-        }else if(op == '5'){
-            informacoes_gerais();
         }else if(op == '6'){
+            informacoes_gerais();
+        }else if(op == '7'){
             informacoes_da_equipe();
         }else if(op == '0'){
             printf("fim\n");
@@ -79,9 +88,10 @@ int menu_principal(void){
     printf("||    1 - Modulo de produtos                                      ||\n");    
     printf("||    2 - Modulo de clientes                                      ||\n");    
     printf("||    3 - Modulo de vendas                                        ||\n");    
-    printf("||    4 - Modulo de relatorios                                    ||\n");    
-    printf("||    5 - Modulo de informações                                   ||\n");    
-    printf("||    6 - Modulo de informações da equipe                         ||\n");    
+    printf("||    4 - Modulo de Entregas                                      ||\n");
+    printf("||    5 - Modulo de relatorios                                    ||\n");      
+    printf("||    6 - Modulo de informações                                   ||\n");    
+    printf("||    7 - Modulo de informações da equipe                         ||\n");    
     printf("||    0 - sair                                                    ||\n");    
     printf("||                                                                ||\n");    
     printf("||    => Escolha a opção desejada: ");
@@ -512,6 +522,27 @@ void tela_exibir_venda(void){
     printf("||      => Opção de entrega: XXXXXXXX\n");
     printf("||      => Valor total: XXXXXXXX\n");
     printf("||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_entregas(void){
+    char entregas[60];
+    strcpy(entregas,"Chico das melancia, rua maledo, 701");
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        Entrgas pendêntes         = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      1- %s                                                     ||\n", entregas);
+    printf("||      2- %s                                                     ||\n", entregas);
+    printf("||      3- %s                                                     ||\n", entregas);
+    printf("||      4- %s                                                     ||\n", entregas);
+    printf("||      5- %s                                                     ||\n", entregas);
+    printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");

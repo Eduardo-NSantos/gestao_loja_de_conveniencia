@@ -2,23 +2,23 @@
 #include<stdlib.h>
 #include<string.h>
 
-int menu_principal(void);
+char menu_principal(void);
 void informacoes_gerais(void);
 void informacoes_da_equipe(void);
 
-int tela_modulo_produtos(void);
+char tela_modulo_produtos(void);
 void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
 void tela_excluir_produto(void);
 
-int tela_modulo_clientes(void);
+char tela_modulo_clientes(void);
 void tela_cadastrar_cliente(void);
 void tela_verificar_cliente(void);
 void tela_alterar_cliente(void);
 void tela_excluir_cliente(void);
 
-void tela_modulo_vendas(void);
+char tela_modulo_vendas(void);
 void tela_cadastrar_venda(void);
 void tela_alterar_venda(void);
 void tela_excluir_venda(void);
@@ -60,11 +60,16 @@ int main(void){
                 tela_excluir_cliente();
             }
         }else if(op == '3'){
-            tela_modulo_vendas();
-            tela_cadastrar_venda();
-            tela_alterar_venda();
-            tela_excluir_venda();
-            tela_exibir_venda();
+            char op_vendas = tela_modulo_vendas();
+            if(op_vendas == '1'){
+                tela_cadastrar_venda();
+            }else if(op_vendas == '2'){
+                tela_alterar_venda();
+            }else if(op_vendas == '3'){
+                tela_excluir_venda();
+            }else if(op_vendas == '4'){
+                tela_exibir_venda();
+            }
         }else if(op == '4'){
             tela_entregas();
         }else if(op == '5'){
@@ -88,7 +93,7 @@ int main(void){
 }
 
 
-int menu_principal(void){
+char menu_principal(void){
     char op;
     system("clear||cls");
     printf("\n");
@@ -164,7 +169,7 @@ void informacoes_da_equipe(void){
     getchar();
 }
 
-int tela_modulo_produtos(void){
+char tela_modulo_produtos(void){
     char op;
     system("clear||cls");
     printf("\n");
@@ -294,7 +299,7 @@ void tela_excluir_produto(void){
     getchar();
 }
 
-int tela_modulo_clientes(void){
+char tela_modulo_clientes(void){
     char op;
     system("clear||cls");
     printf("\n");
@@ -422,7 +427,7 @@ void tela_excluir_cliente(void){
     getchar();
 }
 
-void tela_modulo_vendas(void){
+char tela_modulo_vendas(void){
     char op;
     system("clear||cls");
     printf("\n");
@@ -444,6 +449,7 @@ void tela_modulo_vendas(void){
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void tela_cadastrar_venda(void){

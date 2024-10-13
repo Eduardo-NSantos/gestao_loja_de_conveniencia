@@ -1,17 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 int menu_principal(void);
 void informacoes_gerais(void);
 void informacoes_da_equipe(void);
 
-void tela_modulo_produtos(void);
+int tela_modulo_produtos(void);
 void tela_cadastrar_produto(void);
 void tela_verificar_produto(void);
 void tela_alterar_produto(void);
 void tela_excluir_produto(void);
 
-void tela_modulo_clientes(void);
+int tela_modulo_clientes(void);
 void tela_cadastrar_cliente(void);
 void tela_verificar_cliente(void);
 void tela_alterar_cliente(void);
@@ -37,17 +38,27 @@ int main(void){
         op = menu_principal();
 
         if(op == '1'){
-            tela_modulo_produtos();
-            tela_cadastrar_produto();
-            tela_verificar_produto();
-            tela_alterar_produto();
-            tela_excluir_produto();
+            char op_produto = tela_modulo_produtos();
+            if(op_produto == '1'){
+                tela_cadastrar_produto();
+            }else if(op_produto == '2'){
+                tela_verificar_produto();
+            }else if(op_produto == '3'){
+                tela_alterar_produto();
+            }else if(op_produto == '4'){
+                tela_excluir_produto();
+            }
         }else if(op == '2'){
-            tela_modulo_clientes();
-            tela_cadastrar_cliente();
-            tela_verificar_cliente();
-            tela_alterar_cliente();
-            tela_excluir_cliente();
+            char op_clientes = tela_modulo_clientes();
+            if(op_clientes == '1'){
+                tela_cadastrar_cliente();
+            }else if(op_clientes == '2'){
+                tela_verificar_cliente();
+            }else if(op_clientes == '3'){
+                tela_alterar_cliente();    
+            }else if(op_clientes == '4'){
+                tela_excluir_cliente();
+            }
         }else if(op == '3'){
             tela_modulo_vendas();
             tela_cadastrar_venda();
@@ -153,7 +164,8 @@ void informacoes_da_equipe(void){
     getchar();
 }
 
-void tela_modulo_produtos(void){
+int tela_modulo_produtos(void){
+    char op;
     system("clear||cls");
     printf("\n");
     printf("|| ______________________________________________________________ ||\n");
@@ -165,11 +177,16 @@ void tela_modulo_produtos(void){
     printf("||      3 - Alterar Produto                                       ||\n");
     printf("||      4 - Excluir Produto                                       ||\n");
     printf("||      0 - Sair                                                  ||\n");
+    printf("||                                                                ||\n");    
+    printf("||    => Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void tela_cadastrar_produto(void){
@@ -277,7 +294,8 @@ void tela_excluir_produto(void){
     getchar();
 }
 
-void tela_modulo_clientes(void){
+int tela_modulo_clientes(void){
+    char op;
     system("clear||cls");
     printf("\n");
     printf("|| ______________________________________________________________ ||\n");
@@ -289,11 +307,16 @@ void tela_modulo_clientes(void){
     printf("||      3 - Alterar Cliente                                       ||\n");
     printf("||      4 - Excluir Cliente                                       ||\n");
     printf("||      0 - Sair                                                  ||\n");
+    printf("||                                                                ||\n");    
+    printf("||    => Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 void tela_cadastrar_cliente(void){
@@ -364,13 +387,13 @@ void tela_alterar_cliente(void){
     printf("\n");
     printf("|| ______________________________________________________________ \n");
     printf("||\n");
-    printf("||      => Nome do cliente: ");
+    printf("||      => (novo) Nome do cliente: ");
     scanf("%s", nomec);
     fgets(nomec, 52, stdin);
-    printf("||      => Celular do cliente: ");
+    printf("||      => (novo) Celular do cliente: ");
     scanf("%s", celular);
     fgets(celular, 15, stdin);
-    printf("||      => E-mail do cliente: ");
+    printf("||      => (novo) E-mail do cliente: ");
     scanf("%s", email);
     fgets(email, 52, stdin);
     printf("||                                                                ||\n");

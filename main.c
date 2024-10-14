@@ -558,7 +558,7 @@ void tela_exibir_venda(void){
 }
 
 char tela_entregas(void){
-    char resp[2]; 
+    char resp; 
     system("clear||cls");
     printf("\n");
     printf("|| ______________________________________________________________ ||\n");
@@ -593,6 +593,28 @@ void tela_entregas_pendentes(void){
     printf("||      5- %s                                                     ||\n", entregas);
     printf("||                                                                ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_confirmcancel_entregas(void){
+    char resp; 
+    char num[4];
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =        Confirmar/cancelar        = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      1- Digite o número da entrega: ");
+    scanf("%s", num);
+    printf("||      2- Deseja confirmar a entrega?                            ||\n");
+    printf("||                                                                ||\n");
+    printf("||      obs: 's' para confirmar e 'n' para cancelar               ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("||  => Digite a opção desejada(s/n): ");
+    scanf("%c", &resp);
     printf("\n");
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();

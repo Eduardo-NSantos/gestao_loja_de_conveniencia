@@ -614,17 +614,22 @@ void tela_confirmcancel_entregas(void){
     printf("||                                                                ||\n");
     printf("|| = = = = = = = =        Confirmar/cancelar        = = = = = = = ||\n");
     printf("||                                                                ||\n");
-    printf("||      1- Digite o número da entrega: ");
+    printf("||       Digite o número da entrega: ");
     scanf("%s", num);
     getchar();
-    printf("||      2- Deseja confirmar a entrega?                            ||\n");
+    printf("||       Deseja confirmar a entrega?                              ||\n");
     printf("||                                                                ||\n");
-    printf("||      obs: 's' para confirmar e 'n' para cancelar               ||\n");
+    printf("||       obs: 's' para confirmar e 'n' para cancelar              ||\n");
     printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
-    printf("||  => Digite a opção desejada(s/n): ");
+    printf("     => Digite a opção desejada(s/n): ");
     scanf("%c", &resp);
     getchar();
     printf("\n");
+    if(resp == 's'){
+        printf("| Entrega confirmada!\n");
+    }else{
+        printf("| Entrega cancelada!\n");
+    }
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }

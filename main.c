@@ -24,10 +24,10 @@ void tela_alterar_venda(void);
 void tela_excluir_venda(void);
 void tela_exibir_venda(void);
 
-void tela_entregas(void);
+char tela_entregas(void);
 void tela_entregas_pendentes(void);
-void tela_comfirmar_entregas(void);
-void tela_cancelar_entrega(void);
+void tela_confirmcancel_entregas(void);
+
 
 
 
@@ -557,7 +557,27 @@ void tela_exibir_venda(void){
     getchar();
 }
 
-void tela_entregas(void){
+char tela_entregas(void){
+    char resp[2]; 
+    system("clear||cls");
+    printf("\n");
+    printf("|| ______________________________________________________________ ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = =           Menú entregas          = = = = = = = ||\n");
+    printf("||                                                                ||\n");
+    printf("||      1- Verificar entregas pendentes                           ||\n");
+    printf("||      2- Confirmar entregas ou cancelar entrega                 ||\n");
+    printf("||      0- Sair                                                   ||\n");
+    printf("||                                                                ||\n");
+    printf("|| = = = = = = = = = = = = = = = = = = = = = = = =  = = = = = = = ||\n");
+    printf("||    => Escolha a opção desejada: ");
+    scanf("%c", &resp);
+    printf("\n");
+    printf("| Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void tela_entregas_pendentes(void){
     char entregas[60];
     strcpy(entregas,"Chico das melancia, rua maledo, 701");
     system("clear||cls");
@@ -577,3 +597,5 @@ void tela_entregas(void){
     printf("| Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+

@@ -3,6 +3,8 @@
 #include<string.h>
 #include "modulos/gerais/gerais.h"
 #include "modulos/produtos/produtos.h"
+#include "modulos/clientes/clientes.h"
+#include "modulos/vendas/vendas.h"
 
 char tela_modulo_clientes(void);
 void tela_cadastrar_cliente(void);
